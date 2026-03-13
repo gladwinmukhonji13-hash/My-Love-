@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Surprise</title>
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    text-align:center;
+    color:#333;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    max-width:500px;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    background:#ff6b81;
+    color:white;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#ff4757;
+}
+
+.hidden{
+    display:none;
+}
+
+.letter{
+    text-align:left;
+    line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div class="container" id="home">
+<h2>Hello Tiffany Moraa, Gladwin has a surprise for you</h2>
+<button onclick="openPage()">Open</button>
+<button onclick="ignorePage()">Ignore</button>
+</div>
+
+<!-- IGNORE PAGE -->
+<div class="container hidden" id="ignore">
+<h2>No, you naughty girl, ignorance isn't for you</h2>
+<button onclick="goHome()">Go back</button>
+</div>
+
+<!-- QUESTION PAGE -->
+<div class="container hidden" id="question">
+<h2>Will you be my girlfriend?</h2>
+<button onclick="yesPage()">Yes🥹</button>
+<button onclick="noPage()">No😭</button>
+</div>
+
+<!-- NO PAGE -->
+<div class="container hidden" id="no">
+<h2>Nope, I don't take No for an answer, Go back</h2>
+<button onclick="backQuestion()">Back</button>
+</div>
+
+<!-- YES PAGE -->
+<div class="container hidden" id="yes">
+<h2>My Love,</h2>
+<div class="letter">
+<p>
+When you said yes, the world quietly shifted into something brighter. It’s strange how one small word can carry so much meaning, but yours did. In that moment, it felt like time paused just long enough for me to realize how lucky I am.
+</p>
+
+<p>
+You didn’t just agree to be my girlfriend. You accepted the beginning of something beautiful with me. That means laughter on random days, long conversations that stretch into the night, small moments that slowly become our favorite memories, and a story that only the two of us will write.
+</p>
+
+<p>
+I promise to cherish you, to respect you, and to stand beside you through both the calm days and the difficult ones. I’ll celebrate your victories, support you when things feel heavy, and remind you how incredible you are even on the days you forget.
+</p>
+
+<p>
+You are not just someone I chose. You are someone I’m grateful for every single day. And today marks the moment our journey truly begins.
+</p>
+
+<p>
+So here’s to us — to every smile, every adventure, every quiet moment, and every dream we’ll build together.
+</p>
+
+<p>
+With all my heart,<br>
+Your man, Gladwin 💞
+</p>
+</div>
+</div>
+
+<script>
+
+function openPage(){
+hideAll();
+document.getElementById("question").style.display="block";
+}
+
+function ignorePage(){
+hideAll();
+document.getElementById("ignore").style.display="block";
+}
+
+function goHome(){
+hideAll();
+document.getElementById("home").style.display="block";
+}
+
+function noPage(){
+hideAll();
+document.getElementById("no").style.display="block";
+}
+
+function backQuestion(){
+hideAll();
+document.getElementById("question").style.display="block";
+}
+
+function yesPage(){
+hideAll();
+document.getElementById("yes").style.display="block";
+}
+
+function hideAll(){
+document.getElementById("home").style.display="none";
+document.getElementById("ignore").style.display="none";
+document.getElementById("question").style.display="none";
+document.getElementById("no").style.display="none";
+document.getElementById("yes").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
